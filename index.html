@@ -1,27 +1,86 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>我的项目展示</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <title>论文标题 | 会议名 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;text-align:center;padding:10vh 5vw;background:#f5f7fa;}
-    h1{color:#0366d6}
-    .btn{display:inline-block;margin:8px;padding:10px 22px;background:#0366d6;color:#fff;text-decoration:none;border-radius:6px}
-    video{width:100%;max-width:720px;border-radius:8px}
+    :root{ --accent:#0366d6; --bg:#f7f9fc; --text:#222; }
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
+    header{background:var(--accent);color:#fff;padding:60px 20px;text-align:center}
+    header h1{font-size:2.4em;margin:0}header p{font-size:1.1em;margin:8px 0}
+    header a{color:#fff;text-decoration:underline}
+    .container{max-width:900px;margin:auto;padding:30px 20px}
+    section{margin-bottom:60px}
+    h2{font-size:1.8em;margin-top:0;border-left:4px solid var(--accent);padding-left:12px}
+    img,video{width:100%;display:block;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.08);margin:20px 0}
+    .gif-row{display:flex;gap:15px;flex-wrap:wrap}
+    .gif-row img{flex:1 1 30%;height:auto}
+    .btn{display:inline-block;margin:8px 8px 8px 0;padding:10px 22px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px}
+    footer{text-align:center;padding:40px 15px;font-size:.9em;color:#777}
   </style>
 </head>
+
 <body>
-  <h1>项目名：Awesome Project</h1>
-  <p>一句话卖点 / 论文一句话摘要</p>
+<!-- 1. 头部：标题 / 作者 / 机构 / 论文链接 -->
+<header>
+  <h1>论文标题：XXX</h1>
+  <p>录用会议：AAAI 2026 &nbsp;·&nbsp; 作者：A作者, B作者, C作者 &nbsp;·&nbsp; 机构：某某大学, 某实验室</p>
+  <a class="btn" href="assets/paper.pdf" target="_blank">📄 Paper PDF</a>
+  <a class="btn" href="https://github.com/Photons1/Photons-AAAI2026-Demo" target="_blank">🔧 Code</a>
+</header>
 
-  <!-- 1. 视频 -->
-  <video controls poster="assets/poster.jpg">
+<div class="container">
+
+<!-- 1. Abstract +  teaser 图 -->
+<section id="abstract">
+  <h2>1. Abstract</h2>
+  <p>在这里写 150~200 字的中文或英文摘要，介绍核心贡献、实验结果、关键词。</p>
+  <img src="assets/teaser.jpg" alt=" teaser 图">
+</section>
+
+<!-- 2. 不同视角渲染 -->
+<section id="multi-view">
+  <h2>2. Multi-view Rendering</h2>
+  <p>我们展示了在 3 个新视角下的实时渲染结果（GIF 循环播放）。</p>
+  <div class="gif-row">
+    <img src="assets/render_1.gif" alt="view1">
+    <img src="assets/render_2.gif" alt="view2">
+    <img src="assets/render_3.gif" alt="view3">
+  </div>
+</section>
+
+<!-- 3. Live Demo -->
+<section id="live-demo">
+  <h2>3. Live Demo</h2>
+  <p>浏览器端实时交互演示（录屏 GIF，无需插件）。</p>
+  <div class="gif-row">
+    <img src="assets/demo_1.gif" alt="demo1">
+    <img src="assets/demo_2.gif" alt="demo2">
+    <img src="assets/demo_3.gif" alt="demo3">
+  </div>
+</section>
+
+<!-- 4. Method -->
+<section id="method">
+  <h2>4. Method</h2>
+  <p>我们的方法核心思路一句话：XXX。下图展示了网络框架/流程。</p>
+  <img src="assets/pipeline.png" alt="pipeline">
+</section>
+
+<!-- 5. Demo Video -->
+<section id="video">
+  <h2>5. Demo Video</h2>
+  <video controls poster="assets/video_poster.jpg">
     <source src="assets/video.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 视频。
   </video>
+</section>
 
-  <!-- 2. 论文/宣传材料 -->
-  <a class="btn" href="assets/paper.pdf" target="_blank">📄 阅读论文</a>
-  <a class="btn" href="https://github.com/你的用户名/项目仓库" target="_blank">🔍 源码仓库</a>
+</div>
+
+<footer>
+  © 2025 Photons Group &nbsp;·&nbsp; Template by <a href="https://github.com/Photons1/Photons-AAAI2026-Demo">GitHub</a>
+</footer>
 </body>
 </html>
