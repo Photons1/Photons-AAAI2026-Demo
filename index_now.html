@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photons-AAAI2026-Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{ --accent:#abb0b4d5; --bg:#f7f9fc; --text:#222; }
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
+    header{background:var(--accent);color:#1f1e1e;padding:60px 20px;text-align:center}
+    header h1{font-size:2.4em;margin:0}header p{font-size:1.1em;margin:8px 0}
+    header a{color:#302c2c;text-decoration:underline}
+    .container{max-width:900px;margin:auto;padding:30px 20px}
+    section{margin-bottom:60px}
+    h2{font-size:1.8em;margin-top:0;border-left:4px solid var(--accent);padding-left:12px}
+    img,video{width:100%;display:block;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.08);margin:20px 0}
+    .gif-row{display:flex;gap:15px;flex-wrap:wrap}
+    .gif-row img{flex:1 1 30%;height:auto}
+    .btn{display:inline-block;margin:8px 8px 8px 0;padding:10px 22px;background:var(--accent);color:#fff;text-decoration:none;border-radius:6px}
+    footer{text-align:center;padding:40px 15px;font-size:.9em;color:#777}
+  </style>
+</head>
+
+<body>
+<!-- 1. 头部：标题 / 作者 / 机构 / 论文链接 -->
+<header class="text-center">
+  <!-- 标题 -->
+  <h1 class="mb-3">
+    PHOTONS: Pose-Free Human-Centric Photo-Realistic Real-Time Novel View Synthesis from Sparse Views
+  </h1>
+
+  <!-- 会议 -->
+  <p class="mb-2">AAAI-2026 Demo</p>
+
+  <!-- 作者 -->
+  <p class="mb-2">
+    Yongyang Cheng&nbsp;·&nbsp;
+    Boqin Qin&nbsp;·&nbsp;
+    Zhao Hui&nbsp;·&nbsp;
+    Xu Chen&nbsp;·&nbsp;
+    Tao Zhang&nbsp;·&nbsp;
+    Shang Sun&nbsp;·&nbsp;
+    Haiquan Kang&nbsp;·&nbsp;
+    Xiaojie Xu&nbsp;·&nbsp;
+    Junwei Lv&nbsp;·&nbsp;
+    Lei Yang&nbsp;·&nbsp;
+    Xinyu Liu&nbsp;·&nbsp;
+    Feng Jiang<sup>*</sup>
+  </p>
+
+  <!-- 单位 -->
+  <p>International Business Division, China Telecom Cloud Technology Co., Ltd.</p>
+  <!-- 两个按钮同一行，居中 -->
+<div class="text-center mt-3">
+  <a class="btn btn-lg mx-1"
+     href="assets/paper.pdf"
+     target="_blank"
+     role="button"
+     style="color:#fff;
+            background-color:#007bff;
+            border:2px solid #007bff;">
+    📄 Paper PDF
+  </a>
+</div>
+
+<a class="btn btn-lg mx-1"
+   href="assets/video.mp4"
+   target="_blank"
+   role="button"
+   style="color:#fff;
+          background-color:#dc3545;
+          border:2px solid #dc3545;">
+  ▶ Project Video
+</a>
+</div>
+</header>
+
+<div class="container">
+
+<!-- 1. Abstract +  teaser 图 -->
+<section id="abstract">
+  <h2>Abstract</h2>
+  <p>We present PHOTONS (<b>P</b>ose-Free <b>H</b>uman-Centric P<b>o</b>to-Realistic Real-<b>T</b>ime N<b>o</b>vel View Sy<b>n</b>thesis from <b>S</b>parse Views), a real-time framework for novel view synthesis without requiring camera calibration. Our method reconstructs consistent 3D Gaussian point clouds and synthesizes 2K photo-realistic novel views from arbitrary numbers ($\ge 2$) of freely placed cameras. PHOTONS faithfully renders dynamic human bodies amid complex backgrounds, including interactive object manipulation and fine-grained details (e.g., hair strands), while maintaining 25 FPS throughput on commodity GPU like NVIDIA RTX 4090. By combining pose-free spatial point cloud reconstruction with Gaussian parameter estimation, our method demonstrates strong resilience to occlusions and camera perturbations. Additionally, we develop a 3D stereo system that drastically reduces setup complexity compared to existing solutions. Experiments on public and custom datasets show that PHOTONS outperforms state-of-the-art methods in both efficiency and visual quality.
+</p>
+  <img src="assets/teaser.jpg" alt="System architecture, illustrating how to achieve the 3D stereo from unposed cameras through steps 1 to 5.">
+</section>
+
+<!-- 2. 不同视角渲染 -->
+<section id="multi-view">
+  <h2>Multi-view Rendering</h2>
+  <p>我们展示了在 3 个新视角下的实时渲染结果（GIF 循环播放）。</p>
+  <div class="gif-row">
+    <img src="assets/render_1.gif" alt="view1">
+    <img src="assets/render_2.gif" alt="view2">
+    <img src="assets/render_3.gif" alt="view3">
+  </div>
+</section>
+
+<!-- 3. Live Demo -->
+<section id="live-demo">
+  <h2>Live Demo</h2>
+  <p>浏览器端实时交互演示（录屏 GIF，无需插件）。</p>
+  <div class="gif-row">
+    <img src="assets/demo_1.gif" alt="demo1">
+    <img src="assets/demo_2.gif" alt="demo2">
+    <img src="assets/demo_3.gif" alt="demo3">
+  </div>
+</section>
+
+<!-- 4. Method -->
+<section id="method">
+  <h2>4. Method</h2>
+  <p>我们的方法核心思路一句话：XXX。下图展示了网络框架/流程。</p>
+  <img src="assets/pipeline.png" alt="pipeline">
+</section>
+
+<!-- 5. Demo Video -->
+<section id="video">
+  <h2>5. Demo Video</h2>
+  <video controls poster="assets/video_poster.jpg">
+    <source src="assets/video.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 视频。
+  </video>
+</section>
+
+</div>
+
+<footer>
+  © 2025 Photons Group &nbsp;·&nbsp; Template by <a href="https://github.com/Photons1/Photons-AAAI2026-Demo">GitHub</a>
+</footer>
+</body>
+</html>
