@@ -5,7 +5,7 @@ import sys
 import ffmpeg
 
 # 1. 待扫描的根目录
-SRC_DIR = r'/home/ubuntu/Projects/ruzhen/MVS/gps_unet_test/gps_new/VGGT_test/demo_capture_test/github_page/Photons-AAAI2026-Demo/assets'          # 改成你的路径
+SRC_DIR = r'/home/ubuntu/Projects/ruzhen/MVS/gps_unet_test/gps_new/VGGT_test/demo_capture_test/github_page/Photons-AAAI2026-Demo/assets/ori_video_demo'          # 改成你的路径
 # 2. 输出目录（会自动创建）
 DST_DIR = os.path.join(SRC_DIR, '1080p_no_audio')
 
@@ -38,7 +38,7 @@ def transcode(in_file, out_file):
             .output(out_file,
                     vf='scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2',
                     r=25,          # 帧率
-                    an=None,       # 去除音频
+                    # an=None,       # 去除音频
                     vcodec='libx264',
                     crf=23,        # 画质，越小越清晰，体积越大
                     preset='fast') # 编码速度与压缩率权衡
