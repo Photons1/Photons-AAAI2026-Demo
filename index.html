@@ -1,198 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projectpage of Photons</title>
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projectpage of Photons</title>
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    video {
+      width: 100%;
+      max-width: 100%;
+      background: #000;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
 
-  <!-- cover -->
-  <section>
-    <div class="jumbotron text-center mt-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h2>PHOTONS: Pose-Free Human-Centric Photo-Realistic Real-Time Novel View Synthesis from Sparse Views</h2>
-            <h4 style="color:#70a7d1;">AAAI-2026 Demo</h4>
-            <hr>
-            <h6> <p class="mb-2">
-                  Yongyang Cheng,
-                  Boqin Qin,
-                  Zhao Hui,
-                  Xu Chen,
-                  Tao Zhang,
-                  Shang Sun,
-                  Haiquan Kang,
-                  Xiaojie Xu,
-                  Junwei Lv,
-                  Lei Yang,
-                  Xinyu Liu,
-                  Feng Jiang<sup>*</sup>
-                </p></h6>
-            <p>International Business Division, China Telecom Cloud Technology Co., Ltd.</p>
-            <p>*Corresponding author</p>
-            <p>Contact: qinbq@chinatelecom.cn</p>
-            <!-- <p> <a class="btn btn-secondary btn-lg" href="" role="button">Paper</a> 
-                <a class="btn btn-secondary btn-lg" href="" role="button">Code</a> 
-                <a class="btn btn-secondary btn-lg" href="" role="button">Data</a> </p> -->
-
-            <div class="row justify-content-center">
-              <div class="column">
-                <p class="mb-5"><a class="btn btn-large btn-light" href="assets/paper.pdf" role="button"  target="_blank">
-                  <i class="fa fa-file"></i> Paper</a> </p>
-              </div>
-              <div class="column">
-                <p class="mb-5"><a class="btn btn-large btn-light" href="assets/video.mp4" role="button"  target="_blank">
-                  <i class="fa fa-video-camera"></i> Video</a></p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section>
+<!-- Cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center">
-          <h3>Abstract</h3>
-            <hr style="margin-top:0px">
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251226_112735.mp4" type="video/mp4">
-            </video>
-          <p class="text-left"> We present PHOTONS (<b>P</b>ose-Free <b>H</b>uman-Centric P<b>o</b>to-Realistic Real-<b>T</b>ime N<b>o</b>vel View Sy<b>n</b>thesis from <b>S</b>parse Views), a real-time framework for novel view synthesis without requiring camera calibration. Our method reconstructs consistent 3D Gaussian point clouds and synthesizes 2K photo-realistic novel views from arbitrary numbers ($\ge 2$) of freely placed cameras. PHOTONS faithfully renders dynamic human bodies amid complex backgrounds, including interactive object manipulation and fine-grained details (e.g., hair strands), while maintaining 25 FPS throughput on commodity GPU like NVIDIA RTX 4090. By combining pose-free spatial point cloud reconstruction with Gaussian parameter estimation, our method demonstrates strong resilience to occlusions and camera perturbations. Additionally, we develop a 3D stereo system that drastically reduces setup complexity compared to existing solutions. Experiments on public and custom datasets show that PHOTONS outperforms state-of-the-art methods in both efficiency and visual quality.
+        <div class="col-12">
+          <h2>PHOTONS: Pose-Free Human-Centric Photo-Realistic Real-Time Novel View Synthesis from Sparse Views</h2>
+          <h4 style="color:#70a7d1;">AAAI-2026 Demo</h4>
+          <hr>
+          <h6>
+            <p class="mb-2">
+              Yongyang Cheng,
+              Boqin Qin,
+              Zhao Hui,
+              Xu Chen,
+              Tao Zhang,
+              Shang Sun,
+              Haiquan Kang,
+              Xiaojie Xu,
+              Junwei Lv,
+              Lei Yang,
+              Xinyu Liu,
+              Feng Jiang<sup>*</sup>
             </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
+          </h6>
+          <p>International Business Division, China Telecom Cloud Technology Co., Ltd.</p>
+          <p>*Corresponding author</p>
+          <p>Contact: qinbq@chinatelecom.cn</p>
 
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Multi-view Rendering</h3>
-            <hr style="margin-top:0px">
-          <h6 style="color:#8899a5"> Cameras are handheld or moving.</h6>
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251225_150439.mp4" type="video/mp4">
-            </video>
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251226_101220_20251226_102810.mp4" type="video/mp4">
-            </video>
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251226_103446.mp4" type="video/mp4">
-            </video>
-              <!-- <br><br> -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Live Demo</h3>
-            <hr style="margin-top:0px">
-          <!-- <h6 style="color:#8899a5"> Live Demo</h6> -->
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251225_150856.mp4" type="video/mp4">
-            </video>
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251226_102041_20251226_103129.mp4" type="video/mp4">
-            </video>
-            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-              <source src="assets/VID_20251226_103303.mp4" type="video/mp4">
-            </video>
-              <!-- <br><br> -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-            <h3>Photo-Realistic</h3>
-              <hr style="margin-top:0px">
-              <!-- <h6 style="color:#8899a5">Demo for handling challenging hairstrands, human-object interaction and multi-person scenario</h6> -->
-              <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="assets/VID_20251226_110013.mp4" type="video/mp4">
-              </video>
-              <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="assets/VID_20251225_151246.mp4" type="video/mp4">
-              </video>
-              <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="assets/VID_20251226_110108.mp4" type="video/mp4">
-              </video>
-              <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="assets/VID_20251226_110229.mp4" type="video/mp4">
-              </video>
-              <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="assets/VID_20251226_110737.mp4" type="video/mp4">
-              </video>
-              <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                <source src="assets/VID_20251226_110825.mp4" type="video/mp4">
-              </video>
-          </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
-  <section>
-    <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-            <h3>Method</h3>
-              <hr style="margin-top:0px">
-            <img src="assets/teaser.jpg" width="100%" alt=""/>
-            <p>&nbsp;</p>
-            <p>
-              <b>System architecture, illustrating how to achieve the 3D stereo from unposed cameras through steps 1 to 5.</b>
-            </p>
-            <p>&nbsp;</p>
-          </div>
-      </div>
-    </div>
-  </section>
-  <br>
-
-
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-            <h3>Demo Video</h3>
-            <hr style="margin-top:0px">
-            If the video does not play, please click <a href="assets/video.mp4" target="_blank">here</a> to watch it.
-            <div class="embed-responsive embed-responsive-16by9">
-                <video controls width="100%" preload="metadata">
-                  <source src="assets/video.mp4" type="video/mp4">
-                </video>
+          <div class="row justify-content-center">
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light" href="assets/paper.pdf" role="button" target="_blank">
+                <i class="fa fa-file"></i> Paper</a></p>
             </div>
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light" href="assets/video.mp4" role="button" target="_blank">
+                <i class="fa fa-video-camera"></i> Video</a></p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  </section>
-  <br>
+  </div>
+</section>
 
+<!-- Abstract -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Abstract</h3>
+        <hr style="margin-top:0px">
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_112735.jpg"
+               data-src="assets/VID_20251226_112735.mp4" controls></video>
+        <p class="text-left">
+          We present PHOTONS (<b>P</b>ose-Free <b>H</b>uman-Centric P<b>o</b>to-Realistic Real-<b>T</b>ime N<b>o</b>vel View Sy<b>n</b>thesis from <b>S</b>parse Views), a real-time framework for novel view synthesis without requiring camera calibration. PHOTONS faithfully renders dynamic human bodies amid complex backgrounds, including interactive object manipulation and fine-grained details, while maintaining 25 FPS throughput on commodity GPU like NVIDIA RTX 4090.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
 
-  <footer class="text-center" style="margin-bottom:10px">
-      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
-  </footer>
+<!-- Multi-view Rendering -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Multi-view Rendering</h3>
+        <hr style="margin-top:0px">
+        <h6 style="color:#8899a5"> Cameras are handheld or moving.</h6>
+
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251225_150439.jpg"
+               data-src="assets/VID_20251225_150439.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_101220_20251226_102810.jpg"
+               data-src="assets/VID_20251226_101220_20251226_102810.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_103446.jpg"
+               data-src="assets/VID_20251226_103446.mp4" controls></video>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- Live Demo -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Live Demo</h3>
+        <hr style="margin-top:0px">
+
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251225_150856.jpg"
+               data-src="assets/VID_20251225_150856.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_102041_20251226_103129.jpg"
+               data-src="assets/VID_20251226_102041_20251226_103129.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_103303.jpg"
+               data-src="assets/VID_20251226_103303.mp4" controls></video>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- Photo-Realistic -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Photo-Realistic</h3>
+        <hr style="margin-top:0px">
+
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_110013.jpg"
+               data-src="assets/VID_20251226_110013.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251225_151246.jpg"
+               data-src="assets/VID_20251225_151246.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_110108.jpg"
+               data-src="assets/VID_20251226_110108.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_110229.jpg"
+               data-src="assets/VID_20251226_110229.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_110737.jpg"
+               data-src="assets/VID_20251226_110737.mp4" controls></video>
+        <video class="lazy-video" playsinline muted preload="none"
+               poster="assets/thumbs/VID_20251226_110825.jpg"
+               data-src="assets/VID_20251226_110825.mp4" controls></video>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- Method -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Method</h3>
+        <hr style="margin-top:0px">
+        <img src="assets/teaser.jpg" width="100%" alt=""/>
+        <p>&nbsp;</p>
+        <p>
+          <b>System architecture, illustrating how to achieve the 3D stereo from unposed cameras through steps 1 to 5.</b>
+        </p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- Demo Video -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Demo Video</h3>
+        <hr style="margin-top:0px">
+        If the video does not play, please click <a href="assets/video.mp4" target="_blank">here</a> to watch it.
+        <div class="embed-responsive embed-responsive-16by9">
+          <video class="lazy-video" controls preload="none" poster="assets/thumbs/video.jpg" data-src="assets/video.mp4"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<footer class="text-center" style="margin-bottom:10px">
+  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
+</footer>
+
+<!-- Lazy load + auto-play on scroll + desktop auto-play -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll(".lazy-video");
+
+  // Detect mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (!isMobile) {
+    // Desktop: autoplay all videos immediately
+    videos.forEach(v => {
+      v.src = v.dataset.src;
+      v.play().catch(err => console.log("Autoplay blocked:", err));
+    });
+  } else {
+    // Mobile: lazy-load + autoplay when in viewport
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          if (!video.src) video.src = video.dataset.src;
+          video.play().catch(err => console.log("Autoplay blocked:", err));
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    videos.forEach(v => observer.observe(v));
+  }
+});
+</script>
 
 </body>
 </html>
